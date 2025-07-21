@@ -1,6 +1,6 @@
-/* ========================================
-   GLOBAL STYLES & RESET
-   ======================================== */
+/* ================================================================== */
+/* GLOBAL STYLES & RESET                                           */
+/* ================================================================== */
 
 * {
     margin: 0;
@@ -16,11 +16,9 @@ body {
     overflow-x: hidden;
 }
 
-/* ========================================
-   HEADER & NAVIGATION STYLES
-   ======================================== */
-
-/* Header Styles */
+/* ================================================================== */
+/* HEADER & NAVIGATION                                              */
+/* ================================================================== */
 .header {
     background: #1F2937;
     color: white;
@@ -105,9 +103,6 @@ body {
 .cart-icon {
     color: white;}
 
-/* ========================================
-   MOBILE MENU TOGGLE
-   ======================================== */
 
 .mobile-menu-toggle {
     display: none;
@@ -132,9 +127,9 @@ body {
     content: "✕";
 }
 
-/* ========================================
-   HERO SECTION STYLES
-   ======================================== */
+/* ================================================================== */
+/* HERO SECTION                                                     */
+/* ================================================================== */
 
 /* Hero Section */
 .hero {
@@ -148,7 +143,6 @@ body {
     position: relative;
 }
 
-/* Hero content positioning and styling */
 .hero-content {
     max-width: 600px;
     width: 90%; /* Responsive width */
@@ -165,7 +159,6 @@ body {
     padding: 32px;
 }
 
-/* Glass overlay SVG styling */
 .glass-svg {
     position: absolute;
     left: 50%;
@@ -222,7 +215,6 @@ body {
     }
 }
 
-/* Hero background image */
 .hero-img {
     position: absolute;
     top: 0;
@@ -234,7 +226,6 @@ body {
     pointer-events: none;
 }
 
-/* Hero text and button styling */
 .hero h1 {
     font-size: 50px;
     margin-bottom: 16px;
@@ -264,7 +255,6 @@ body {
     background: #111827;
 }
 
-/* Slide-in animation */
 @keyframes slideInUp {
     from {
         opacity: 0;
@@ -276,9 +266,9 @@ body {
     }
 }
 
-/* ========================================
-   MAIN CONTENT & SECTIONS
-   ======================================== */
+/* ================================================================== */
+/* MAIN CONTENT & LAYOUT                                           */
+/* ================================================================== */
 
 /* Main Content */
 .main-content {
@@ -295,10 +285,35 @@ body {
     padding: 68px 0;
 }
 
+/* Featured Projects */
+.projects-grid {
+    display: grid;
+    /* Creates responsive grid columns that automatically adjust based on available space.
+       - repeat(): Creates multiple columns with the same pattern
+       - auto-fit: Automatically fits as many columns as possible in the container width
+       - minmax(300px, 1fr): Each column has minimum width of 300px and maximum of 1fr (equal fraction)
+       - Result: Columns automatically wrap to new rows when screen gets too narrow for 300px minimum */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+    margin-top: 48px;
+}
 
-/* ========================================
-   MOBILE RESPONSIVE STYLES
-   ======================================== */
+/* Services */
+.services-grid {
+    display: grid;
+    /* Creates responsive grid columns that automatically adjust based on available space.
+       - repeat(): Creates multiple columns with the same pattern
+       - auto-fit: Automatically fits as many columns as possible in the container width
+       - minmax(250px, 1fr): Each column has minimum width of 250px and maximum of 1fr (equal fraction)
+       - Result: Columns automatically wrap to new rows when screen gets too narrow for 250px minimum */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 32px;
+    margin-top: 48px;
+}
+
+/* ================================================================== */
+/* MOBILE RESPONSIVE STYLES                                        */
+/* ================================================================== */
 
 /* Mobile Styles */
 @media (max-width: 768px) {
@@ -398,51 +413,41 @@ body {
     }
 }
 
-/* ========================================
-   UTILITY CLASSES & CONTAINERS
-   ======================================== */
+/* ================================================================== */
+/* SERVICE CARDS                                                   */
+/* ================================================================== */
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 32px;
+/* Services */
+
+.services-grid {
+    display: grid;
+    /* Creates responsive grid columns that automatically adjust based on available space.
+       - repeat(): Creates multiple columns with the same pattern
+       - auto-fit: Automatically fits as many columns as possible in the container width
+       - minmax(250px, 1fr): Each column has minimum width of 250px and maximum of 1fr (equal fraction)
+       - Result: Columns automatically wrap to new rows when screen gets too narrow for 250px minimum */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 32px;
+    margin-top: 48px;
 }
 
-/* Section header styling */
-.section-header {
+.service-card {
+    background: #FFFFFF;
+    padding: 32px;
+    border-radius: 6px;
     text-align: center;
-    margin-bottom: 48px;
+    transition: all 0.3s ease;
+    border: 1px solid #e9ecef;
 }
 
-.section-subtitle {
-    color: #1C5A98;
-    font-size: 18px;
-    margin-bottom: 8px;
-    letter-spacing: 0.5px;
-    text-align: left;
-    font-weight: bold;
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
 }
 
-.section-title {
-    font-size: 30px;
-    margin-bottom: 16px;
-    color: #1F2937;
-    line-height: 1.2; /* Reduced line spacing */
-    text-align: left;
-
-}
-
-.section-description {
-    font-size: 18px;
-    color: #333;
-    margin: 0 auto;
-    text-align: left;
-
-}
-
-/* ========================================
-   FOOTER STYLES
-   ======================================== */
+/* ================================================================== */
+/* FOOTER                                                           */
+/* ================================================================== */
 
 /* Footer */
 .footer {
@@ -542,7 +547,6 @@ body {
     color: #ecf0f1;
 }
 
-/* Social media icons styling */
 .social-icons {
     display: flex;
     gap: 16px;
@@ -649,9 +653,9 @@ body {
     }
 }
 
-/* ========================================
-   ABOUT PAGE SPECIFIC STYLES
-   ======================================== */
+/* ================================================================== */
+/* ABOUT PAGE SECTIONS                                             */
+/* ================================================================== */
 
 /* Page2 (About) */
 /* Main Content Container */
@@ -712,31 +716,7 @@ body {
     text-decoration: underline;
 }
 
-/* Illustration Styles */
-.illustration {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.illustration img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-/* Illustration placeholders */
-.illustration-placeholder {
-    width: 100%;
-    height: 300px;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 1.2rem;
-    text-align: center;
-}
 
 /* Mobile Responsive Styles for Main Content */
 @media (max-width: 768px) {
@@ -768,3 +748,303 @@ body {
     }
 }
 
+/* ================================================================== */
+/* CAROUSEL COMPONENT                                              */
+/* ================================================================== */
+
+/* Main carousel container - outer wrapper with styling and positioning */
+.carousel-container {
+    position: relative; /* Enable absolute positioning for child elements */
+    max-width: 800px; /* Maximum width to prevent carousel from becoming too large */
+    margin: 40px auto; /* Center horizontally with vertical spacing */
+    border-radius: 6px; 
+    overflow: hidden; /* Hide content that extends beyond rounded corners */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth and elevation */
+}
+
+/* Inner wrapper that contains all slides and controls their dimensions */
+.carousel-wrapper {
+    position: relative; /* Enable absolute positioning for navigation elements */
+    width: 100%; /* Full width of container */
+    height: 400px; /* Fixed height for consistent carousel dimensions */
+    overflow: hidden; /* Hide slides that extend beyond the visible area */
+}
+
+/* Individual slide styling - hidden by default */
+.carousel-slide {
+    display: none; /* Hide all slides by default (only active slide is visible) */
+    position: relative; /* Enable positioning context for slide content */
+    width: 100%; /* Full width of the wrapper */
+    height: 100%; /* Full height of the wrapper */
+    animation: fadeIn 0.5s ease-in-out; /* Smooth fade-in animation when slide becomes active */
+}
+
+/* Active slide state - makes the current slide visible */
+.carousel-slide.active {
+    display: block; /* Show only the active slide */
+}
+
+/* Image styling within carousel slides */
+.carousel-slide img {
+    width: 100%; /* Full width of the slide container */
+    height: 100%; /* Full height of the slide container */
+    object-fit: cover; /* Scale image to cover entire area while maintaining aspect ratio */
+}
+
+
+/* Navigation Buttons */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.carousel-btn:hover {
+    background: white;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-btn.prev {
+    left: 20px;
+}
+
+.carousel-btn.next {
+    right: 20px;
+}
+
+.carousel-btn img {
+    width: 20px;
+    height: 20px;
+    color: #333;
+}
+
+/* Indicators */
+.carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicator.active {
+    background: white;
+}
+
+.indicator:hover {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+/* Carousel Animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .carousel-wrapper {
+        height: 300px;
+    }
+    
+    .carousel-caption {
+        padding: 20px 20px 20px;
+    }
+    
+    .carousel-caption h3 {
+        font-size: 20px;
+    }
+    
+    .carousel-caption p {
+        font-size: 14px;
+    }
+    
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .carousel-btn.prev {
+        left: 10px;
+    }
+    
+    .carousel-btn.next {
+        right: 10px;
+    }
+}
+
+/* ================================================================== */
+/* SERVICES DETAILS PAGE                                           */
+/* ================================================================== */
+
+/* ================================================================== */
+/* SERVICES DETAILS PAGE STYLES                                    */
+/* ================================================================== */
+
+/* Main container for the services details page */
+.services-details-section {
+    padding: 72px 0; /* Large top/bottom padding for proper spacing */
+}
+
+/* Header section containing the page title */
+.services-header {
+    text-align: center; 
+    margin-bottom: 24px; /* Space below header before cards */
+}
+
+/* Main heading styling for services page */
+.services-header h2 {
+    font-size: 24px; /* Medium heading size */
+    color: #1F2937; /* Dark gray color for readability */
+    margin-bottom: 24px; /* Space below heading */ 
+    text-align: center;
+}
+
+/* Grid container for service cards layout */
+.services-cards-container {
+    display: grid; /* Use CSS Grid for layout */
+    /* Responsive grid: minimum 350px per column, auto-fit as many as possible */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+
+/* Individual service card styling */
+.service-card {
+    background: white; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
+    overflow: hidden; /* Hide overflow for clean edges */
+    /* Smooth transitions for hover effects */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for service cards */
+.service-card:hover {
+    transform: translateY(-5px); /* Lift card up on hover */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+/* Service card title styling */
+.service-card h3 {
+    color: #333; /* Dark text color */
+    padding: 20px 25px; /* Internal spacing around title */
+    margin: 0; /* Remove default margin */
+    font-size: 20px; /* Title font size */
+    font-weight: 600; /* Semi-bold weight */
+    
+}
+
+/* Scrollable content area within each service card */
+.service-content {
+    max-height: 400px; /* Limit height to prevent overly tall cards */
+    overflow-y: auto; /* Add vertical scrollbar when content overflows */
+    padding: 0; /* No padding on container (padding applied to items) */
+}
+
+/* Custom scrollbar styling for WebKit browsers (Chrome, Safari) */
+.service-content::-webkit-scrollbar {
+    width: 6px; /* Thin scrollbar width */
+}
+
+/* Scrollbar track (background) styling */
+.service-content::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Light gray track background */
+}
+
+/* Scrollbar thumb (draggable part) styling */
+.service-content::-webkit-scrollbar-thumb {
+    background: #c4c4c4; /* Medium gray thumb color */
+    border-radius: 3px; /* Rounded scrollbar thumb */
+}
+
+/* Scrollbar thumb hover effect */
+.service-content::-webkit-scrollbar-thumb:hover {
+    background: #333; /* Darker color on hover for better UX */
+}
+
+/* Individual service item within a card */
+.service-item {
+    padding: 24px; /* Internal spacing for service items */
+    text-align: left; /* Left-align all text content */
+    background: #F2F2F2; /* Light gray background to separate items */
+}
+
+/* Service item subheading styling */
+.service-item h4 {
+    color: #1F2937; /* Dark gray color matching main headings */
+    font-size: 18px;
+    margin-bottom: 12px;
+    font-weight: 600; 
+    text-align: left; 
+}
+
+/* Service item paragraph text styling */
+.service-item p {
+    color: #333; 
+    line-height: 1.6; 
+    margin-bottom: 12px; 
+    text-align: left; 
+}
+
+/* Service item unordered list styling */
+.service-item ul {
+    list-style: none; /* Remove default bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 12px 0; /* Vertical spacing around list */
+    text-align: left; /* Left-align list */
+}
+
+/* Individual list item styling */
+.service-item ul li {
+    color: #333; /* Dark gray text color */
+    padding: 5px 0; /* Vertical padding for each list item */
+    padding-left: 24px; /* Left padding to make room for custom bullet */
+    position: relative; /* Enable absolute positioning for pseudo-element */
+    text-align: left; /* Left-align list item text */
+}
+
+/* Custom bullet point using CSS pseudo-element */
+.service-item ul li:before {
+    content: "•"; /* Bullet character */
+    color: #333; /* Same color as text */
+    font-weight: bold; /* Bold bullet for emphasis */
+    position: absolute; /* Position relative to list item */
+    left: 0; /* Align to left edge of padding */
+    font-size: 14px; /* Bullet size */
+}
+
+/* "Learn more" link styling */
+.learn-more-link {
+    color: #1C5A98; 
+    text-decoration: none; /* Remove underline */
+    font-weight: 600;
+    font-size: 14px;
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+    text-align: left; /* Left-align link text */
+    display: block; /* Make link a block element for proper left alignment */
+}

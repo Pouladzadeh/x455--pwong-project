@@ -1,7 +1,8 @@
-/* ================================================================== */
-/* GLOBAL STYLES & RESET                                           */
-/* ================================================================== */
+/* ========================================================================
+   GLOBAL STYLES & RESET
+   ======================================================================== */
 
+/* Universal reset and base font family */
 * {
     margin: 0;
     padding: 0;
@@ -9,6 +10,7 @@
     font-family: 'Source Sans Pro', sans-serif;
 }
 
+/* Base body styles with overflow prevention for horizontal scroll */
 body {
     font-family: 'Source Sans Pro', sans-serif;
     line-height: 1.6;
@@ -16,9 +18,11 @@ body {
     overflow-x: hidden;
 }
 
-/* ================================================================== */
-/* HEADER & NAVIGATION                                              */
-/* ================================================================== */
+/* ========================================================================
+   HEADER & NAVIGATION STYLES
+   ======================================================================== */
+
+/* Fixed header with blur effect when scrolled */
 .header {
     background: #1F2937;
     color: white;
@@ -30,11 +34,13 @@ body {
     transition: all 0.3s ease;
 }
 
+/* Scrolled state with backdrop blur effect */
 .header.scrolled {
     background: rgba(31, 41, 55, 0.95);
     backdrop-filter: blur(10px);
 }
 
+/* Navigation container with flexbox layout */
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -44,12 +50,14 @@ body {
     padding: 0 32px;
 }
 
+/* Main navigation menu */
 .nav-menu {
     display: flex;
     list-style: none;
     gap: 32px;
 }
 
+/* Navigation links with hover effects */
 .nav-menu a {
     color: white;
     text-decoration: none;
@@ -65,12 +73,14 @@ body {
     color: #98F9FF;
 }
 
+/* Right side navigation actions (search, cart) */
 .nav-actions {
     display: flex;
     align-items: center;
     gap: 16px;
 }
 
+/* Search functionality in header */
 .search-container {
     position: relative;
     display: inline-block;
@@ -100,10 +110,12 @@ body {
     z-index: 1;
 }
 
+/* Shopping cart icon in header */
 .cart-icon {
     color: white;}
 
 
+/* Mobile hamburger menu toggle */
 .mobile-menu-toggle {
     display: none;
     background: none;
@@ -127,11 +139,11 @@ body {
     content: "✕";
 }
 
-/* ================================================================== */
-/* HERO SECTION                                                     */
-/* ================================================================== */
+/* ========================================================================
+   HERO SECTION STYLES
+   ======================================================================== */
 
-/* Hero Section */
+/* Full viewport hero section with background image */
 .hero {
     background-size: cover;
     background-position: center;
@@ -143,6 +155,7 @@ body {
     position: relative;
 }
 
+/* Hero content container with glass morphism effect */
 .hero-content {
     max-width: 600px;
     width: 90%; /* Responsive width */
@@ -159,6 +172,7 @@ body {
     padding: 32px;
 }
 
+/* Glass morphism background effect */
 .glass-svg {
     position: absolute;
     left: 50%;
@@ -215,6 +229,7 @@ body {
     }
 }
 
+/* Hero background image - covers entire viewport */
 .hero-img {
     position: absolute;
     top: 0;
@@ -226,6 +241,7 @@ body {
     pointer-events: none;
 }
 
+/* Hero text styling */
 .hero h1 {
     font-size: 50px;
     margin-bottom: 16px;
@@ -239,6 +255,7 @@ body {
     line-height: 1.4; /* Reduced line spacing */
 }
 
+/* Call-to-action button */
 .cta-button {
     background: #1C5A98;
     color: white;
@@ -255,6 +272,7 @@ body {
     background: #111827;
 }
 
+/* Slide-in animation for hero content */
 @keyframes slideInUp {
     from {
         opacity: 0;
@@ -266,26 +284,37 @@ body {
     }
 }
 
-/* ================================================================== */
-/* MAIN CONTENT & LAYOUT                                           */
-/* ================================================================== */
+/* ========================================================================
+   MAIN CONTENT & LAYOUT STYLES
+   ======================================================================== */
 
-/* Main Content */
+/* Main content container with top margin to account for fixed header */
 .main-content {
     margin-top: 80px;
 }
 
-/* Standard Section Padding - 68px desktop, 48px mobile */
+/* Container for centering content with max-width */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+/* Standard section padding - 68px desktop, 48px mobile */
 .section {
     padding: 68px 0;
 }
 
-/* About Page Sections - Same padding as standard sections */
+/* About page sections - same padding as standard sections */
 .about-section {
     padding: 68px 0;
 }
 
-/* Featured Projects */
+/* ========================================================================
+   FEATURED PROJECTS SECTION
+   ======================================================================== */
+
+/* Responsive grid for featured projects */
 .projects-grid {
     display: grid;
     /* Creates responsive grid columns that automatically adjust based on available space.
@@ -299,6 +328,11 @@ body {
 }
 
 /* Services */
+/* ========================================================================
+   SERVICES SECTION
+   ======================================================================== */
+
+/* Responsive grid for services with smaller minimum width */
 .services-grid {
     display: grid;
     /* Creates responsive grid columns that automatically adjust based on available space.
@@ -311,12 +345,13 @@ body {
     margin-top: 48px;
 }
 
-/* ================================================================== */
-/* MOBILE RESPONSIVE STYLES                                        */
-/* ================================================================== */
+/* ========================================================================
+   MOBILE RESPONSIVE STYLES
+   ======================================================================== */
 
-/* Mobile Styles */
+/* Tablet and mobile breakpoint adjustments */
 @media (max-width: 768px) {
+    /* Reduce section padding on mobile */
     .section {
         padding: 48px 0;
     }
@@ -325,6 +360,7 @@ body {
         padding: 48px 0;
     }
     
+    /* Reduce container padding on mobile */
     .container {
         padding: 0 24px;
     }
@@ -333,6 +369,7 @@ body {
         padding: 0 24px;
     }
     
+    /* Mobile navigation menu - hidden by default, shown when active */
     .nav-menu {
         display: none;
         position: absolute;
@@ -351,10 +388,12 @@ body {
         display: flex;
     }
 
+    /* Show mobile menu toggle button */
     .mobile-menu-toggle {
         display: block;
     }
 
+    /* Hide desktop search on mobile */
     .search-container {
         display: none;
     }
@@ -364,7 +403,7 @@ body {
         display: none;
     }
 
-    /* Mobile search and cart styles */
+    /* Mobile search and cart links in menu */
     .mobile-search,
     .mobile-cart {
         display: flex;
@@ -391,7 +430,7 @@ body {
     }
 }
 
-/* Hide mobile search and cart on desktop */
+/* Desktop-only navigation elements */
 @media (min-width: 769px) {
     .mobile-search,
     .mobile-cart {
@@ -399,7 +438,7 @@ body {
     }
 }
 
-/* Show mobile search and cart only on mobile */
+/* Mobile-only navigation elements */
 @media (max-width: 768px) {
     .mobile-search,
     .mobile-cart {
@@ -413,24 +452,122 @@ body {
     }
 }
 
-/* ================================================================== */
-/* SERVICE CARDS                                                   */
-/* ================================================================== */
+/* ========================================================================
+   SECTION HEADERS & CONTENT STYLES
+   ======================================================================== */
 
-/* Services */
-
-.services-grid {
-    display: grid;
-    /* Creates responsive grid columns that automatically adjust based on available space.
-       - repeat(): Creates multiple columns with the same pattern
-       - auto-fit: Automatically fits as many columns as possible in the container width
-       - minmax(250px, 1fr): Each column has minimum width of 250px and maximum of 1fr (equal fraction)
-       - Result: Columns automatically wrap to new rows when screen gets too narrow for 250px minimum */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 32px;
-    margin-top: 48px;
+/* Section header styling for consistent typography */
+.section-header {
+    text-align: center;
+    margin-bottom: 48px;
 }
 
+/* Section subtitle with brand color */
+.section-subtitle {
+    color: #1C5A98;
+    font-size: 18px;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+    text-align: left;
+    font-weight: bold;
+}
+
+/* Main section title */
+.section-title {
+    font-size: 30px;
+    margin-bottom: 16px;
+    color: #1F2937;
+    line-height: 1.2; /* Reduced line spacing */
+    text-align: left;
+
+}
+
+/* Section description text */
+.section-description {
+    font-size: 18px;
+    color: #333;
+    margin: 0 auto;
+    text-align: left;
+
+}
+
+/* ========================================================================
+   PROJECT CARD STYLES
+   ======================================================================== */
+
+/* Individual project card styling */
+
+/* ========================================================================
+   PROJECT CARD STYLES
+   ======================================================================== */
+
+/* Individual project card styling with hover effects */
+.project-card {
+    background: white;
+    border-radius: 6px;
+    padding: 32px;
+    border: 1px solid #e9ecef;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Top accent line for project cards */
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+}
+
+/* Card hover effects */
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+/* Project image container */
+.project-icon {
+    width: 100%;
+    height: 260px;
+    border-radius: 6px;
+    display: block;
+    overflow: hidden;
+    margin: 0 0 16px 0;
+}
+
+/* Project image styling */
+.project-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+/* Project card title */
+.project-card h3 {
+    font-size: 16px;
+    margin-bottom: 4px;
+    color: #1F2937;
+}
+
+/* Project card description */
+.project-card p {
+    color: #333;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* ========================================================================
+   SERVICE CARD STYLES
+   ======================================================================== */
+
+/* Individual service card styling */
 .service-card {
     background: #FFFFFF;
     padding: 32px;
@@ -440,22 +577,58 @@ body {
     border: 1px solid #e9ecef;
 }
 
+/* Service card hover effects */
 .service-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
 }
 
-/* ================================================================== */
-/* FOOTER                                                           */
-/* ================================================================== */
+/* Service icon container */
+.service-icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+}
 
-/* Footer */
+/* Service icon image styling */
+.service-icon img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+/* Service card title */
+.service-card h3 {
+    color: #333;
+    padding: 20px 25px;
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* Service card description */
+.service-card p {
+    color: #333;
+    font-size: 14px;
+}
+
+/* ========================================================================
+   FOOTER STYLES
+   ======================================================================== */
+
+/* Main footer container */
 .footer {
     background: #1F2937;
     color: white;
     padding: 48px 0 16px;
 }
 
+/* Footer content grid layout */
 .footer-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -463,6 +636,7 @@ body {
     margin-bottom: 32px;
 }
 
+/* Footer section headers */
 .footer-section h3 {
     font-size: 20.8px;
     margin-bottom: 16px;
@@ -470,12 +644,14 @@ body {
     font-weight: bold; 
 }
 
+/* Footer section text and list items */
 .footer-section p, .footer-section li {
     color: white;
     margin-bottom: 8px;
     font-weight: normal; 
 }
 
+/* Footer links */
 .footer-section a {
     color: white;
     text-decoration: none;
@@ -483,6 +659,7 @@ body {
     font-weight: normal; 
 }
 
+/* Footer bottom section with copyright */
 .footer-bottom {
     text-align: center;
     padding-top: 16px;
@@ -495,6 +672,7 @@ body {
     margin: 0;
 }
 
+/* Footer section layouts and alignments */
 .footer-contact {
     text-align: left;
 }
@@ -547,16 +725,23 @@ body {
     color: #ecf0f1;
 }
 
+/* ========================================================================
+   SOCIAL MEDIA ICONS
+   ======================================================================== */
+
+/* Social icons container */
 .social-icons {
     display: flex;
     gap: 16px;
 }
 
+/* Individual social icon styling */
 .social-icon {
     display: inline-block;
     transition: transform 0.3s ease;
 }
 
+/* Social icon images with white filter */
 .social-icon img {
     width: 20px;
     height: 20px;
@@ -564,6 +749,7 @@ body {
     transition: filter 0.3s ease;
 }
 
+/* Social icon hover effects */
 .social-icon:hover {
     transform: scale(1.1);
 }
@@ -571,6 +757,10 @@ body {
 .social-icon:hover img {
     filter: brightness(0) invert(0.7);
 }
+
+/* ========================================================================
+   MOBILE FOOTER RESPONSIVE STYLES
+   ======================================================================== */
 
 /* Mobile footer adjustments */
 @media (max-width: 768px) {
@@ -605,6 +795,7 @@ body {
     }
 }
 
+/* Extra small mobile adjustments */
 @media (max-width: 480px) {
     .footer {
         padding: 32px 0 16px;
@@ -633,13 +824,17 @@ body {
     }
 }
 
+/* ========================================================================
+   HEADER SHOPPING CART ICON SIZING
+   ======================================================================== */
+
 /* Shopping cart icon in header - specific sizing */
 .nav-actions .social-icon img {
     width: 32px;
     height: 32px;
 }
 
-/* Mobile responsive adjustments */
+/* Mobile responsive adjustments for icons */
 @media (max-width: 480px) {
     .social-icon img {
         width: 18px;
@@ -653,27 +848,11 @@ body {
     }
 }
 
-/* ================================================================== */
-/* ABOUT PAGE SECTIONS                                             */
-/* ================================================================== */
+/* ========================================================================
+   ABOUT PAGE (PAGE2) STYLES
+   ======================================================================== */
 
-/* Page2 (About) */
-/* Main Content Container */
-.main-content {
-    margin-top: 80px;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 32px;
-}
-
-/* Section Styles */
-.section {
-    padding: 68px 0;
-}
-
+/* About page section content layout */
 .section-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -681,6 +860,7 @@ body {
     align-items: center;
 }
 
+/* Reverse layout for alternating sections */
 .section-content.reverse {
     grid-template-columns: 1fr 1fr;
 }
@@ -693,7 +873,7 @@ body {
     order: 1;
 }
 
-/* Text Content */
+/* About page text content styling */
 .section h2 {
     font-size: 2.5rem;
     color: #2c3e50;
@@ -716,9 +896,37 @@ body {
     text-decoration: underline;
 }
 
+/* Illustration container and styling */
+.illustration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.illustration img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
 
-/* Mobile Responsive Styles for Main Content */
+/* Illustration placeholders for development */
+.illustration-placeholder {
+    width: 100%;
+    height: 300px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/* ========================================================================
+   ABOUT PAGE MOBILE RESPONSIVE STYLES
+   ======================================================================== */
+
+/* Mobile responsive styles for about page content */
 @media (max-width: 768px) {
     .section-content {
         grid-template-columns: 1fr;
@@ -748,51 +956,554 @@ body {
     }
 }
 
-/* ================================================================== */
-/* CAROUSEL COMPONENT                                              */
-/* ================================================================== */
+/* ========================================================================
+   PORTFOLIO/TABLE PAGE STYLES
+   ======================================================================== */
 
-/* Main carousel container - outer wrapper with styling and positioning */
+/* Portfolio section container */
+.portfolio-section {
+    padding-top: 68px;
+    padding-right: 0;
+    padding-bottom: 68px;
+    padding-left: 0;
+    }
+
+/* Portfolio page header */
+.portfolio-header {
+    margin-bottom: 48px;
+}
+
+.portfolio-header h2 {
+    font-size: 30px;
+    color: #1F2937;
+    margin-bottom: 16px;
+    line-height: 1.2;
+}
+
+.portfolio-header p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ========================================================================
+   PORTFOLIO FILTER BUTTONS
+   ======================================================================== */
+
+/* Filter buttons for portfolio categorization */
+.filter-buttons {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+    justify-content: end;
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    border: 1px solid #e9ecef;
+    background: white;
+    color: #333;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: #98F9FF;
+    color: #333;
+    border-color: #98F9FF;
+}
+
+/* ========================================================================
+   PORTFOLIO TABLE STYLES
+   ======================================================================== */
+
+/* Table base styling consistent with design system */
+table {
+    font-family: 'Source Sans Pro', sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    background: white;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+/* Table header styling */
+th {
+    background: #F0F0F0;
+    color: #333;
+    text-align: left;
+    padding: 16px;
+    font-weight: 600;
+    font-size: 14px;
+    border-bottom: 2px solid #e9ecef;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    position: relative;
+}
+
+/* Sort icon styling in table headers */
+.sort-icon {
+    display: inline-block;
+    margin-right: 6px;
+    width: 16px;
+    height: 16px;
+    color: #333;
+    vertical-align: middle;
+}
+
+/* Table data cell styling */
+td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid #F0F0F0;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Table row styling - all white, no alternating colors */
+tr {
+    background-color: white;
+}
+
+tr:hover {
+    background-color: #F0F0F0;
+}
+
+/* First column (Project Name) - emphasized styling */
+td:first-child {
+    font-weight: 600;
+    color: #1F2937;
+}
+
+/* Remove border from last row */
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* ========================================================================
+   PORTFOLIO MOBILE RESPONSIVE STYLES
+   ======================================================================== */
+
+/* Mobile responsive adjustments for portfolio */
+@media (max-width: 768px) {
+    .portfolio-section {
+        padding: 48px 0;
+    }
+    
+    .portfolio-header h2 {
+        font-size: 24px;
+    }
+    
+    .portfolio-header p {
+        font-size: 16px;
+    }
+    
+    .filter-buttons {
+        gap: 12px;
+    }
+    
+    /* Table responsive adjustments */
+    table {
+        font-size: 14px;
+    }
+    
+    th, td {
+        padding: 12px 8px;
+    }
+    
+    /* Stack table on very small screens */
+    @media (max-width: 480px) {
+        table, thead, tbody, th, td, tr {
+            display: block;
+        }
+        
+        thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+        
+        tr {
+            border: 1px solid #e9ecef;
+            margin-bottom: 10px;
+            border-radius: 6px;
+            padding: 8px;
+        }
+        
+        td {
+            border: none;
+            border-bottom: 1px solid #e9ecef;
+            position: relative;
+            padding-left: 50%;
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+        
+        td:before {
+            content: attr(data-label) ": ";
+            position: absolute;
+            left: 6px;
+            width: 45%;
+            padding-right: 10px;
+            white-space: nowrap;
+            font-weight: 600;
+            color: #1F2937;
+        }
+    }
+}
+
+/* ========================================================================
+   GALLERY STYLES
+   ======================================================================== */
+
+/* Main gallery grid layout */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 300px);
+    gap: 20px;
+    margin-top: 32px;
+    padding-bottom: 68px;
+}
+
+/* Individual gallery item styling */
+.gallery-item {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ========================================================================
+   GALLERY MOBILE RESPONSIVE STYLES
+   ======================================================================== */
+
+/* Mobile responsive gallery layouts */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 250px);
+        gap: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8, 200px);
+        gap: 16px;
+    }
+}
+
+/* Filter functionality for gallery */
+.gallery-item.hidden {
+    display: none;
+}
+
+/* ========================================================================
+   GALLERY MODAL STYLES
+   ======================================================================== */
+
+/* Modal overlay for gallery image viewing */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #1F2937;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Modal content container */
+.modal-content {
+    position: relative;
+    margin: 5% auto;
+    max-width: 50%;
+    animation: zoomIn 0.3s ease-in-out;
+}
+
+.modal-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;}
+
+/* Modal close button */
+.close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* Modal animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* ========================================================================
+   GALLERY MODAL MOBILE RESPONSIVE
+   ======================================================================== */
+
+/* Modal responsive design */
+@media (max-width: 768px) {
+    .modal-content {
+        margin: 10% auto;
+        max-width: 95%;
+        max-height: 80%;
+    }
+    
+    .close {
+        font-size: 28px;
+        top: -35px;
+    }
+}
+
+/* ========================================================================
+   VIDEO GALLERY STYLES
+   ======================================================================== */
+
+/* Video gallery grid layout */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 24px;
+    padding-bottom: 24px;
+}
+
+/* Individual video item container */
+.video-item {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Embedded video iframe styling */
+.video-item iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 6px;
+}
+
+/* ========================================================================
+   VIDEO GALLERY MOBILE RESPONSIVE
+   ======================================================================== */
+
+/* Video gallery mobile responsive layouts */
+@media (max-width: 768px) {
+    .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        gap: 16px;
+    }
+}
+
+/* ========================================================================
+   ACCORDION STYLES
+   ======================================================================== */
+
+/* Footer accordion container */
+.footer-accordion {
+    margin-top: 64px;
+    padding-bottom: 68px;
+}
+
+/* Main accordion container */
+.accordion {
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Individual accordion items */
+.accordion-item {
+    border-bottom: 1px solid #e9ecef;
+}
+
+.accordion-item:last-child {
+    border-bottom: none;
+}
+
+/* Accordion header button styling */
+.accordion-header {
+    width: 100%;
+    padding: 16px 20px;
+    background: #f8f9fa;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+    background: #e9ecef;
+}
+
+.accordion-header.active {
+    background: #e9ecef;
+    color: #333;
+}
+
+/* Accordion icon styling with rotation animation */
+.accordion-icon {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.accordion-icon img {
+    width: 18px;
+    height: 18px;
+    transition: transform 0.3s ease;
+}
+
+/* Rotate arrow 90 degrees when active */
+.accordion-header.active .accordion-icon img {
+    transform: rotate(90deg);
+}
+
+/* Accordion content with smooth height transition */
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.accordion-content.active {
+    max-height: 300px;
+}
+
+/* Accordion content body */
+.accordion-body {
+    padding: 16px 20px;
+    background: white;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Accordion section in main content areas */
+.accordion-section {
+    margin-top: 48px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.accordion-section h3 {
+    font-size: 24px;
+    color: #1F2937;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+/* ========================================================================
+   CAROUSEL STYLES
+   ======================================================================== */
+
+/* Main carousel container */
 .carousel-container {
-    position: relative; /* Enable absolute positioning for child elements */
-    max-width: 800px; /* Maximum width to prevent carousel from becoming too large */
-    margin: 40px auto; /* Center horizontally with vertical spacing */
-    border-radius: 6px; 
-    overflow: hidden; /* Hide content that extends beyond rounded corners */
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth and elevation */
+    position: relative;
+    max-width: 800px;
+    margin: 40px auto;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
-/* Inner wrapper that contains all slides and controls their dimensions */
+/* Carousel wrapper for slides */
 .carousel-wrapper {
-    position: relative; /* Enable absolute positioning for navigation elements */
-    width: 100%; /* Full width of container */
-    height: 400px; /* Fixed height for consistent carousel dimensions */
-    overflow: hidden; /* Hide slides that extend beyond the visible area */
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
 }
 
-/* Individual slide styling - hidden by default */
+/* Individual carousel slides */
 .carousel-slide {
-    display: none; /* Hide all slides by default (only active slide is visible) */
-    position: relative; /* Enable positioning context for slide content */
-    width: 100%; /* Full width of the wrapper */
-    height: 100%; /* Full height of the wrapper */
-    animation: fadeIn 0.5s ease-in-out; /* Smooth fade-in animation when slide becomes active */
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    animation: fadeIn 0.5s ease-in-out;
 }
 
-/* Active slide state - makes the current slide visible */
 .carousel-slide.active {
-    display: block; /* Show only the active slide */
+    display: block;
 }
 
-/* Image styling within carousel slides */
 .carousel-slide img {
-    width: 100%; /* Full width of the slide container */
-    height: 100%; /* Full height of the slide container */
-    object-fit: cover; /* Scale image to cover entire area while maintaining aspect ratio */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 
-/* Navigation Buttons */
+/* ========================================================================
+   CAROUSEL NAVIGATION & CONTROLS
+   ======================================================================== */
+
+/* Carousel navigation buttons */
 .carousel-btn {
     position: absolute;
     top: 50%;
@@ -829,7 +1540,7 @@ body {
     color: #333;
 }
 
-/* Indicators */
+/* Carousel indicators/dots */
 .carousel-indicators {
     position: absolute;
     bottom: 20px;
@@ -858,13 +1569,11 @@ body {
     background: rgba(255, 255, 255, 0.7);
 }
 
-/* Carousel Animation */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
+/* ========================================================================
+   CAROUSEL MOBILE RESPONSIVE
+   ======================================================================== */
 
-/* Mobile Responsive */
+/* Carousel mobile responsive design */
 @media (max-width: 768px) {
     .carousel-wrapper {
         height: 300px;
@@ -896,155 +1605,147 @@ body {
     }
 }
 
-/* ================================================================== */
-/* SERVICES DETAILS PAGE                                           */
-/* ================================================================== */
+/* ========================================================================
+   SERVICES DETAILS SECTION
+   ======================================================================== */
 
-/* ================================================================== */
-/* SERVICES DETAILS PAGE STYLES                                    */
-/* ================================================================== */
-
-/* Main container for the services details page */
+/* Services details main container */
 .services-details-section {
-    padding: 72px 0; /* Large top/bottom padding for proper spacing */
+    padding-top: 48px;
+    padding-right: 0;
+    padding-bottom: 68px;
+    padding-left: 0;
+ 
 }
 
-/* Header section containing the page title */
+/* Services section header */
 .services-header {
-    text-align: center; 
-    margin-bottom: 24px; /* Space below header before cards */
-}
-
-/* Main heading styling for services page */
-.services-header h2 {
-    font-size: 24px; /* Medium heading size */
-    color: #1F2937; /* Dark gray color for readability */
-    margin-bottom: 24px; /* Space below heading */ 
     text-align: center;
-}
-
-/* Grid container for service cards layout */
-.services-cards-container {
-    display: grid; /* Use CSS Grid for layout */
-    /* Responsive grid: minimum 350px per column, auto-fit as many as possible */
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto; 
-}
-
-/* Individual service card styling */
-.service-card {
-    background: white; 
-    border-radius: 12px; 
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
-    overflow: hidden; /* Hide overflow for clean edges */
-    /* Smooth transitions for hover effects */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Hover effect for service cards */
-.service-card:hover {
-    transform: translateY(-5px); /* Lift card up on hover */
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
-}
-
-/* Service card title styling */
-.service-card h3 {
-    color: #333; /* Dark text color */
-    padding: 20px 25px; /* Internal spacing around title */
-    margin: 0; /* Remove default margin */
-    font-size: 20px; /* Title font size */
-    font-weight: 600; /* Semi-bold weight */
+    margin-bottom: 24px;
     
 }
 
-/* Scrollable content area within each service card */
+.services-header h2 {
+    font-size: 24px;
+    color: #1F2937;
+    margin-bottom: 12px;
+
+}
+
+/* Services cards container grid layout */
+.services-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+
+/* Enhanced service card styling with scrollable content */
+.service-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.service-card h3 {
+    color: #333;
+    padding: 20px 25px;
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    
+}
+
+/* Scrollable service content area */
 .service-content {
-    max-height: 400px; /* Limit height to prevent overly tall cards */
-    overflow-y: auto; /* Add vertical scrollbar when content overflows */
-    padding: 0; /* No padding on container (padding applied to items) */
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 0;
 }
 
-/* Custom scrollbar styling for WebKit browsers (Chrome, Safari) */
+/* Custom scrollbar styling */
 .service-content::-webkit-scrollbar {
-    width: 6px; /* Thin scrollbar width */
+    width: 6px;
 }
 
-/* Scrollbar track (background) styling */
 .service-content::-webkit-scrollbar-track {
-    background: #f1f1f1; /* Light gray track background */
+    background: #f1f1f1;
 }
 
-/* Scrollbar thumb (draggable part) styling */
 .service-content::-webkit-scrollbar-thumb {
-    background: #c4c4c4; /* Medium gray thumb color */
-    border-radius: 3px; /* Rounded scrollbar thumb */
+    background: #c4c4c4
+    ;
+    border-radius: 3px;
 }
 
-/* Scrollbar thumb hover effect */
 .service-content::-webkit-scrollbar-thumb:hover {
-    background: #333; /* Darker color on hover for better UX */
+    background: #333;
 }
 
-/* Individual service item within a card */
+/* Individual service items within cards */
 .service-item {
-    padding: 24px; /* Internal spacing for service items */
-    text-align: left; /* Left-align all text content */
-    background: #F2F2F2; /* Light gray background to separate items */
+    padding: 24px;
+    text-align: left; 
+    background: #F2F2F2
 }
 
-/* Service item subheading styling */
 .service-item h4 {
-    color: #1F2937; /* Dark gray color matching main headings */
+    color: #1F2937;
     font-size: 18px;
     margin-bottom: 12px;
-    font-weight: 600; 
+    font-weight: 600;
     text-align: left; 
 }
 
-/* Service item paragraph text styling */
 .service-item p {
-    color: #333; 
-    line-height: 1.6; 
-    margin-bottom: 12px; 
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 12px;
     text-align: left; 
 }
 
-/* Service item unordered list styling */
+/* Service item lists with custom bullet points */
 .service-item ul {
-    list-style: none; /* Remove default bullet points */
-    padding: 0; /* Remove default padding */
-    margin: 12px 0; /* Vertical spacing around list */
-    text-align: left; /* Left-align list */
+    list-style: none;
+    padding: 0;
+    margin: 12px 0;
+    text-align: left;
 }
 
-/* Individual list item styling */
 .service-item ul li {
-    color: #333; /* Dark gray text color */
-    padding: 5px 0; /* Vertical padding for each list item */
-    padding-left: 24px; /* Left padding to make room for custom bullet */
-    position: relative; /* Enable absolute positioning for pseudo-element */
-    text-align: left; /* Left-align list item text */
+    color: #333;
+    padding: 5px 0;
+    padding-left: 24px;
+    position: relative;
+    text-align: left;
 }
 
-/* Custom bullet point using CSS pseudo-element */
 .service-item ul li:before {
-    content: "•"; /* Bullet character */
-    color: #333; /* Same color as text */
-    font-weight: bold; /* Bold bullet for emphasis */
-    position: absolute; /* Position relative to list item */
-    left: 0; /* Align to left edge of padding */
-    font-size: 14px; /* Bullet size */
+    content: "•";
+    color: #333;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    font-size: 14px;
 }
 
-/* "Learn more" link styling */
+/* Learn more links */
 .learn-more-link {
-    color: #1C5A98; 
-    text-decoration: none; /* Remove underline */
+    color: #1C5A98;
+    text-decoration: none;
     font-weight: 600;
     font-size: 14px;
-    transition: color 0.3s ease; /* Smooth color transition on hover */
-    text-align: left; /* Left-align link text */
-    display: block; /* Make link a block element for proper left alignment */
+    transition: color 0.3s ease;
+    text-align: left;
+    display: block; /* make the align left properly */
 }
+

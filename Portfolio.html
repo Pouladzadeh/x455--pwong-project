@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+===============================================
+PORTFOLIO PAGE - DESIGN STUDIO WEBSITE
+===============================================
+This page showcases the company's featured projects
+with filtering capabilities and detailed project information.
+
+Author: Design Studio Team
+Last Updated: July 2025
+===============================================
+-->
+
+<head>
+    <!-- META TAGS AND BASIC SETUP -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Design Studio</title>
+    
+    <!-- EXTERNAL STYLESHEETS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!--
+    ===============================================
+    HEADER SECTION
+    ===============================================
+    Navigation bar with logo, menu items, search functionality,
+    and mobile-responsive hamburger menu
+    ===============================================
+    -->
+    <header class="header" id="header">
+        <div class="nav-container">
+            <!-- LOGO SECTION -->
+            <a href="index.html" class="logo">
+                <img src="img/Logo.svg" alt="Design Studio Logo" style="height:23px; width: 122px; vertical-align:middle;">
+            </a>
+            
+            <!-- MAIN NAVIGATION MENU -->
+            <nav class="nav-menu" id="navMenu">
+                <a href="index.html">Home</a>
+                <a href="About.html">About</a>
+                <a href="Services.html">Services</a>
+                <a href="Portfolio.html">Portfolio</a>
+                <a href="Videos.html">Videos</a>
+                <a href="Gallery.html">Gallery</a>
+                
+                
+                <!-- MOBILE-ONLY NAVIGATION ITEMS -->
+                <!-- Search option for mobile devices -->
+                <div class="mobile-search">
+                    <img src="img/Search.svg" alt="Search" class="mobile-search-icon">
+                    <span>Search</span>
+                </div>
+                
+                <!-- Shopping cart option for mobile devices -->
+                <div class="mobile-cart">
+                    <img src="img/ShoppingCart.svg" alt="Shopping Cart" class="mobile-cart-icon">
+                    <span>Shopping Cart</span>
+                </div>
+            </nav>
+            
+            <!-- DESKTOP NAVIGATION ACTIONS -->
+            <div class="nav-actions">
+                <!-- Search functionality for desktop -->
+                <div class="search-container">
+                    <img src="img/Search.svg" alt="Search" class="search-icon">
+                    <input type="text" class="search-box" placeholder="Search">
+                </div>
+                
+                <!-- Shopping cart icon for desktop -->
+                <a href="#" class="social-icon">
+                    <img src="img/ShoppingCart.svg" alt="ShoppingCart">
+                </a>
+                
+                <!-- Mobile hamburger menu toggle button -->
+                <button class="mobile-menu-toggle" id="mobileMenuToggle"></button>
+            </div>
+        </div>
+    </header>
+
+    <!--
+    ===============================================
+    MAIN CONTENT SECTION
+    ===============================================
+    Portfolio showcase with project filtering and 
+    detailed project information table
+    ===============================================
+    -->
+    <main class="main-content">
+        <section class="portfolio-section">
+            <div class="container">
+                <!-- PORTFOLIO HEADER -->
+                <!-- Introduction and description of the portfolio section -->
+                <div class="portfolio-header">
+                    <h2>Featured Projects</h2>
+                    <p>Our portfolio showcases a range of work from branding and print to web and product design. Each project reflects our approach: strategy-driven, people-focused, and visually strong. Scroll through some of our recent collaborations to get a feel for our design process and results.</p>
+                </div>
+                
+                <!-- PROJECT FILTER BUTTONS -->
+                <!-- Interactive buttons to filter projects by category -->
+                <div class="filter-buttons">
+                    <button class="filter-btn active">All</button>
+                    <button class="filter-btn">Branding</button>
+                    <button class="filter-btn">Web Design</button>
+                    <button class="filter-btn">Print</button>
+                  <!----  <button class="filter-btn">Product Design</button> -->
+                </div>
+                
+                <!--
+                ===============================================
+                PROJECTS DATA TABLE
+                ===============================================
+                Responsive table displaying project information
+                with sortable columns and mobile-friendly layout
+                ===============================================
+                -->
+                <table>
+                    <!-- TABLE HEADER -->
+                    <thead>
+                        <tr>
+                            <th>Project Name</th>
+                            <th>Category <img src="img/sort.svg" alt="Sort" class="sort-icon"></th>
+                            <th>Client <img src="img/sort.svg" alt="Sort" class="sort-icon"></th>
+                            <th>Competition Date <img src="img/sort.svg" alt="Sort" class="sort-icon"></th>
+                        </tr>
+                    </thead>
+                    
+                    <!-- TABLE BODY - PROJECT DATA -->
+                    <tbody>
+                        <!-- Project 1: Glow Cosmetics Rebrand -->
+                        <tr>
+                            <td data-label="Project Name">Glow Cosmetics Rebrand</td>
+                            <td data-label="Category">Branding</td>
+                            <td data-label="Client">Glow Cosmetics</td>
+                            <td data-label="Competition Date">February 2024</td>
+                        </tr>
+                        
+                        <!-- Project 2: NovaBank Mobile App UI -->
+                        <tr>
+                            <td data-label="Project Name">NovaBank Mobile App UI</td>
+                            <td data-label="Category">UI/UX Design</td>
+                            <td data-label="Client">Nova Bank</td>
+                            <td data-label="Competition Date">January 2024</td>
+                        </tr>
+                        
+                        <!-- Project 3: EcoCart Website Redesign -->
+                        <tr>
+                            <td data-label="Project Name">EcoCart Website Redesign</td>
+                            <td data-label="Category">Web Design</td>
+                            <td data-label="Client">EcoCart</td>
+                            <td data-label="Competition Date">December 2023</td>
+                        </tr>
+                        
+                        <!-- Project 4: Aether Annual Report 2023 -->
+                        <tr>
+                            <td data-label="Project Name">Aether Annual Report 2023</td>
+                            <td data-label="Category">Print</td>
+                            <td data-label="Client">Aether Group</td>
+                            <td data-label="Competition Date">November 2023</td>
+                        </tr>
+                        
+                        <!-- Project 5: FreshFit App Onboarding Flow -->
+                        <tr>
+                            <td data-label="Project Name">FreshFit App Onboarding Flow</td>
+                            <td data-label="Category">UI/UX Design</td>
+                            <td data-label="Client">FreshFit</td>
+                            <td data-label="Competition Date">October 2023</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    
+    <!--
+    ===============================================
+    FOOTER SECTION
+    ===============================================
+    Contact information, social media links, and
+    additional navigation for the website
+    ===============================================
+    -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- CONTACT INFORMATION SECTION -->
+                <div class="footer-section footer-contact">
+                    <h3>Contact Info</h3>
+                    <p>123 Design Street<br>
+                    Creative City, CC 1234<br>
+                    Phone: (555) 123-4566<br>
+                    Email: hello@Designstudio.com</p>
+                </div>
+                
+                <!-- SOCIAL MEDIA LINKS SECTION -->
+                <div class="footer-section footer-social">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">
+                            <img src="img/facebook.svg" alt="Facebook">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="img/Twitter.svg" alt="Twitter">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="img/Instagram.svg" alt="Instagram">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="img/LinkedIn.svg" alt="LinkedIn">
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- SERVICES QUICK LINKS SECTION -->
+                <div class="footer-section footer-services">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Branding</a></li>
+                        <li><a href="#">Graphic Design</a></li>
+                        <li><a href="#">UI/UX Design</a></li>
+                        <li><a href="#">WebDesign & Development</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- COPYRIGHT AND LEGAL INFORMATION -->
+            <div class="footer-bottom">
+                   <p>© 2025 DesignStudio – All rights reserved | For educational demonstration purposes only</p>
+            </div>
+        </div>
+    </footer>
+
+    <!--
+    ===============================================
+    JAVASCRIPT FUNCTIONALITY
+    ===============================================
+    Interactive features including mobile menu,
+    scroll effects, and navigation highlighting
+    ===============================================
+    -->
+    <script>
+        // Mobile menu toggle functionality
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        if (mobileMenuToggle && navMenu) {
+            mobileMenuToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                mobileMenuToggle.classList.toggle('active');
+            });
+        }
+
+        // Header background change on scroll
+        const header = document.getElementById('header');
+        if (header) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+        }
+
+        // Set active menu based on current page
+        function setActiveMenuByPage() {
+            const navLinks = document.querySelectorAll('.nav-menu a');
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                const linkHref = link.getAttribute('href');
+                
+                // Check if current page matches the link
+                if (linkHref === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        // Call on page load
+        document.addEventListener('DOMContentLoaded', setActiveMenuByPage);
+
+        // ===============================================
+        // TABLE SORTING FUNCTIONALITY
+        // ===============================================
+        
+        // Track current sort state
+        let currentSort = {
+            column: null,
+            direction: 'asc' // 'asc' or 'desc'
+        };
+
+        // Function to parse date strings to Date objects for comparison
+        function parseDate(dateString) {
+            const months = {
+                'January': 0, 'February': 1, 'March': 2, 'April': 3,
+                'May': 4, 'June': 5, 'July': 6, 'August': 7,
+                'September': 8, 'October': 9, 'November': 10, 'December': 11
+            };
+            
+            const parts = dateString.split(' ');
+            const month = months[parts[0]];
+            const year = parseInt(parts[1]);
+            
+            return new Date(year, month);
+        }
+
+        // Function to sort table by completion date
+        function sortTableByDate() {
+            const table = document.querySelector('table');
+            const tbody = table.querySelector('tbody');
+            const rows = Array.from(tbody.querySelectorAll('tr'));
+            
+            // Determine sort direction
+            if (currentSort.column === 'date') {
+                currentSort.direction = currentSort.direction === 'asc' ? 'desc' : 'asc';
+            } else {
+                currentSort.column = 'date';
+                currentSort.direction = 'asc';
+            }
+            
+            // Sort the rows
+            rows.sort((a, b) => {
+                const dateA = parseDate(a.cells[3].textContent.trim());
+                const dateB = parseDate(b.cells[3].textContent.trim());
+                
+                if (currentSort.direction === 'asc') {
+                    return dateA - dateB;
+                } else {
+                    return dateB - dateA;
+                }
+            });
+            
+            // Clear tbody and append sorted rows
+            tbody.innerHTML = '';
+            rows.forEach(row => tbody.appendChild(row));
+            
+            // Update sort indicators
+            updateSortIndicators();
+        }
+
+        // Function to sort table by other columns (text-based)
+        function sortTableByColumn(columnIndex, columnName) {
+            const table = document.querySelector('table');
+            const tbody = table.querySelector('tbody');
+            const rows = Array.from(tbody.querySelectorAll('tr'));
+            
+            // Determine sort direction
+            if (currentSort.column === columnName) {
+                currentSort.direction = currentSort.direction === 'asc' ? 'desc' : 'asc';
+            } else {
+                currentSort.column = columnName;
+                currentSort.direction = 'asc';
+            }
+            
+            // Sort the rows
+            rows.sort((a, b) => {
+                const textA = a.cells[columnIndex].textContent.trim().toLowerCase();
+                const textB = b.cells[columnIndex].textContent.trim().toLowerCase();
+                
+                if (currentSort.direction === 'asc') {
+                    return textA.localeCompare(textB);
+                } else {
+                    return textB.localeCompare(textA);
+                }
+            });
+            
+            // Clear tbody and append sorted rows
+            tbody.innerHTML = '';
+            rows.forEach(row => tbody.appendChild(row));
+            
+            // Update sort indicators
+            updateSortIndicators();
+        }
+
+        // Function to update visual sort indicators
+        function updateSortIndicators() {
+            const headers = document.querySelectorAll('th');
+            
+            // Reset all sort indicators
+            headers.forEach(header => {
+                const sortIcon = header.querySelector('.sort-icon');
+                if (sortIcon) {
+                    sortIcon.style.transform = 'scale(1)';
+                    sortIcon.style.opacity = '0.5';
+                    sortIcon.style.filter = 'brightness(1)';
+                }
+            });
+            
+            // Update active sort indicator
+            let activeHeaderIndex;
+            switch(currentSort.column) {
+                case 'category': activeHeaderIndex = 1; break;
+                case 'client': activeHeaderIndex = 2; break;
+                case 'date': activeHeaderIndex = 3; break;
+                default: return;
+            }
+            
+            const activeHeader = headers[activeHeaderIndex];
+            const activeSortIcon = activeHeader.querySelector('.sort-icon');
+            if (activeSortIcon) {
+                activeSortIcon.style.opacity = '1';
+                activeSortIcon.style.filter = 'brightness(0.6)';
+                if (currentSort.direction === 'desc') {
+                    activeSortIcon.style.transform = 'rotate(180deg) scale(1)';
+                } else {
+                    activeSortIcon.style.transform = 'rotate(0deg) scale(1)';
+                }
+            }
+        }
+
+        // Add click listeners to sortable headers
+        function initializeSorting() {
+            const headers = document.querySelectorAll('th');
+            
+            // Category column (index 1)
+            headers[1].addEventListener('click', () => {
+                sortTableByColumn(1, 'category');
+            });
+            
+            // Client column (index 2)
+            headers[2].addEventListener('click', () => {
+                sortTableByColumn(2, 'client');
+            });
+            
+            // Completion Date column (index 3)
+            headers[3].addEventListener('click', () => {
+                sortTableByDate();
+            });
+            
+            // Add hover effect to sortable headers consistent with footer
+            headers.forEach((header, index) => {
+                if (index > 0) { // Skip first column (Project Name)
+                    header.style.cursor = 'pointer';
+                    header.style.transition = 'all 0.3s ease';
+                    
+                    const sortIcon = header.querySelector('.sort-icon');
+                    if (sortIcon) {
+                        sortIcon.style.transition = 'all 0.3s ease';
+                    }
+                    
+                    header.addEventListener('mouseenter', () => {
+                        // Header hover effect
+                        header.style.backgroundColor = '#f8f9fa';
+                        header.style.transform = 'translateY(-1px)';
+                        
+                        // Sort icon hover effect (consistent with footer social icons)
+                        if (sortIcon) {
+                            sortIcon.style.transform = 'scale(1.1)';
+                            sortIcon.style.filter = 'brightness(0.7)';
+                        }
+                    });
+                    
+                    header.addEventListener('mouseleave', () => {
+                        // Reset header
+                        header.style.backgroundColor = '';
+                        header.style.transform = 'translateY(0)';
+                        
+                        // Reset sort icon (unless it's the active sort column)
+                        if (sortIcon) {
+                            // Check if this is the active sort column
+                            const isActiveSort = (
+                                (currentSort.column === 'category' && index === 1) ||
+                                (currentSort.column === 'client' && index === 2) ||
+                                (currentSort.column === 'date' && index === 3)
+                            );
+                            
+                            if (!isActiveSort) {
+                                sortIcon.style.transform = 'scale(1)';
+                                sortIcon.style.filter = 'brightness(1)';
+                                sortIcon.style.opacity = '0.5';
+                            } else {
+                                // Keep active state styling
+                                sortIcon.style.transform = currentSort.direction === 'desc' ? 'rotate(180deg) scale(1)' : 'rotate(0deg) scale(1)';
+                                sortIcon.style.opacity = '1';
+                                sortIcon.style.filter = 'brightness(1)';
+                            }
+                        }
+                    });
+                }
+            });
+        }
+
+        // ===============================================
+        // FILTER FUNCTIONALITY
+        // ===============================================
+        
+        // Function to filter table rows by category
+        function filterProjects(category) {
+            const rows = document.querySelectorAll('tbody tr');
+            
+            rows.forEach(row => {
+                const projectCategory = row.cells[1].textContent.trim(); // Category column
+                
+                if (category === 'All' || projectCategory === category) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        }
+
+        // Function to handle filter button clicks
+        function initializeFilters() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    button.classList.add('active');
+                    
+                    // Get the filter category
+                    const category = button.textContent.trim();
+                    
+                    // Filter the projects
+                    filterProjects(category);
+                });
+            });
+        }
+
+        // Initialize everything on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            setActiveMenuByPage();
+            initializeSorting();
+            initializeFilters();
+        });
+    </script>
+</body>
+</html>

@@ -412,7 +412,7 @@ body {
         color: white;
         text-decoration: none;
         padding: 8px 0;
-        border-top: 1px solid #1A1A1A;
+        border-top: 1px solid #C4C4C4;
         margin-top: 8px;
         transition: color 0.3s ease;
     }
@@ -490,12 +490,6 @@ body {
     text-align: left;
 
 }
-
-/* ========================================================================
-   PROJECT CARD STYLES
-   ======================================================================== */
-
-/* Individual project card styling */
 
 /* ========================================================================
    PROJECT CARD STYLES
@@ -849,7 +843,7 @@ body {
 }
 
 /* ========================================================================
-   ABOUT PAGE (PAGE2) STYLES
+   ABOUT PAGE STYLES
    ======================================================================== */
 
 /* About page section content layout */
